@@ -2,7 +2,6 @@ package com.pingine.fleetpulse.service.trip;
 
 import com.pingine.fleetpulse.domain.Trip;
 import com.pingine.fleetpulse.persistence.mongo.TelemetryPoint;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
@@ -15,7 +14,6 @@ class TripDetectorTest {
     private final TripDetector detector = new TripDetector();
 
     @Test
-    @Disabled("Enable and make this pass.")
     void detectsSingleTripFromIgnitionOnToOff() {
         LocalDateTime t0 = LocalDateTime.parse("2026-04-27T08:00:00");
         List<TelemetryPoint> points = List.of(
@@ -37,7 +35,6 @@ class TripDetectorTest {
     }
 
     @Test
-    @Disabled("Enable and make this pass.")
     void handlesDuplicateTimestamps() {
         LocalDateTime t0 = LocalDateTime.parse("2026-04-27T08:00:00");
         List<TelemetryPoint> points = List.of(
