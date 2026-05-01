@@ -63,8 +63,8 @@ public class TripDetector {
 
                 Trip.TripPoint tp = toTripPoint(point);
 
-                if (tripPoints.isEmpty() || !tripPoints.get(tripPoints.size() - 1).equals(tp)) {
-                    tripPoints.add(toTripPoint(point));
+                if (!tripPoints.get(tripPoints.size() - 1).equals(tp)) {
+                    tripPoints.add(tp);
                 }
 
                 if (!point.isIgnition()) {
